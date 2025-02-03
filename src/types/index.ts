@@ -5,7 +5,7 @@ export interface VersionRequest {
   
   export interface AppVersion {
     version: string;
-    updated?: string;
+    updated?: string | number;
     recentChanges?: string;
   }
   

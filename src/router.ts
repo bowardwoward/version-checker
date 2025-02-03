@@ -9,7 +9,6 @@ router.get('/health', (req: Request, res: Response) => {
   res.json({ status: 'healthy' });
 });
 
-// @ts-expect-error goofy ahh hell
 router.post('/check-versions', async (req: Request, res: Response) => {
   try {
     const { iosAppId, androidPackageName }: VersionRequest = req.body;
@@ -45,7 +44,6 @@ router.post('/check-versions', async (req: Request, res: Response) => {
   }
 });
 
-// @ts-expect-error goofy ahh hell
 router.get('/version/:platform/:identifier', async (req: Request, res: Response) => {
   try {
     const { platform, identifier } = req.params;

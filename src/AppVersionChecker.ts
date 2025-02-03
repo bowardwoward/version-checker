@@ -5,7 +5,7 @@ import { AppVersion } from './types';
 
 export class AppVersionChecker {
   private readonly headers: Record<string, string>;
-
+  // 
   constructor() {
     this.headers = {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -19,12 +19,11 @@ export class AppVersionChecker {
       
       const $ = cheerio.load(response.data);
       const versionElement = $('.whats-new__latest__version');
-      
       if (versionElement.length) {
         return {
           version: versionElement.text().split(' ').pop() || 'Unknown',
           updated: $('.whats-new__latest__date').text() || undefined,
-          recentChanges: $('.whats-new__content').text() || undefined
+          recentChanges: $('.whats-new__content').text().trim() || undefined
         };
       }
       return null;
