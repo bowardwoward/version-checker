@@ -1,6 +1,8 @@
 {
   "name": "app-version-checker",
   "version": "1.0.0",
+  "repository": "https://github.com/bowardwoward/version-checker",
+  "author": "Eli <abgao.elijah@hyperstacksinc.com>",
   "description": "API to check app versions from App Store and Play Store",
   "scripts": {
     "build": "npx tsc",
