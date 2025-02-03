@@ -1,0 +1,28 @@
+{
+  "name": "version-checker",
+  "version": "1.0.0",
+  "description": "Check app version",
+  "repository": "https://github.com/bowardwoward/version-checker",
+  "author": "Eli <abgao.elijah@hyperstacksinc.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/app.ts",
+    "build": "tsc",
+    "dev": "nodemon src/app.ts"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "google-play-scraper": "^10.0.1",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
